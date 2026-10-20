@@ -1,106 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Mobile Menu Toggle
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const mainNav = document.getElementById('main-nav');
-
-    if (mobileMenuToggle && mainNav) {
-        mobileMenuToggle.addEventListener('click', () => {
-            // Toggle display of navigation on mobile
-            if (mainNav.style.display === 'flex') {
-                mainNav.style.display = 'none';
-            } else {
-                mainNav.style.display = 'flex';
-                mainNav.style.flexDirection = 'column';
-                mainNav.style.position = 'absolute';
-                mainNav.style.top = '70px';
-                mainNav.style.left = '0';
-                mainNav.style.width = '100%';
-                mainNav.style.backgroundColor = '#fff';
-                mainNav.style.padding = '20px';
-                mainNav.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
-                mainNav.style.zIndex = '99';
-            }
+    // Mobile filter toggle
+    const filterBtn = document.getElementById('filterBtn');
+    const sidebar = document.getElementById('sidebar');
+    if (filterBtn) {
+        filterBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
         });
     }
 
-    // Wishlist Toggle (Heart Icon)
-    const wishlistButtons = document.querySelectorAll('.wishlist-btn');
-    
-    wishlistButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent triggering the product card click
-            const icon = btn.querySelector('i');
-            
-            if (icon.classList.contains('far')) {
-                icon.classList.remove('far');
-                icon.classList.add('fas');
-                icon.style.color = '#d32f2f';
-            } else {
-                icon.classList.remove('fas');
-                icon.classList.add('far');
-                icon.style.color = '#333';
-            }
-        });
-    });
-
-    // Color Swatch Selection (Visual only for demo)
-    const colorSwatches = document.querySelectorAll('.color-swatch');
-    
-    colorSwatches.forEach(swatch => {
-        swatch.addEventListener('click', () => {
-            // Remove active class from all
-            colorSwatches.forEach(s => s.classList.remove('active'));
-            // Add active to clicked
-            swatch.classList.add('active');
-        });
-    });
-
-    // Filter Accordion (Visual Toggle)
-    const filterHeaders = document.querySelectorAll('.filter-group h3');
-    
-    filterHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const icon = header.querySelector('i');
-            const list = header.nextElementSibling;
-            
-            if (list.style.display === 'none') {
-                list.style.display = 'block';
-                icon.classList.remove('fa-chevron-down');
-                icon.classList.add('fa-chevron-up');
-            } else {
-                list.style.display = 'none';
-                icon.classList.remove('fa-chevron-up');
-                icon.classList.add('fa-chevron-down');
-            }
-        });
-    });
-
-    // Size Button Selection
-    const sizeButtons = document.querySelectorAll('.size-grid button');
-    
-    sizeButtons.forEach(btn => {
+    // Collapsible filters
+    document.querySelectorAll('.filter-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
-            if (btn.style.backgroundColor === 'black') {
-                btn.style.backgroundColor = '';
-                btn.style.color = '';
-            } else {
-                btn.style.backgroundColor = 'black';
-                btn.style.color = 'white';
-            }
+            const options = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            options.classList.toggle('open');
+            icon.classList.toggle('fa-chevron-up');
+            icon.classList.toggle('fa-chevron-down');
         });
     });
 
-    // Smooth Scroll for Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
+    // Size selection
+    document.querySelectorAll('.size-grid button').forEach(b => {
+        b.addEventListener('click', () => b.classList.toggle('active'));
+    });
+
+    // Color dots
+    document.querySelectorAll('.dot').forEach(d => {
+        d.addEventListener('click', () => {
+            d.parentElement.querySelectorAll('.dot').forEach(x => x.classList.remove('active'));
+            d.classList.add('active');
         });
     });
+
+    // Wishlist toggle
+    document.querySelectorAll('.wishlist').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const icon = btn.querySelector('i');
+            icon.classList.toggle('fa-regular');
+            icon.classList.toggle('fa-solid');
+            icon.style.color = icon.classList.contains('fa-solid') ? 'red' : '';
+        });
+    });
+
+    // Smooth scroll
+    document.documentElement.style.scrollBehavior = 'smooth';
+
+    // Netlify form - prevent double submit message
+    const form = document.querySelector('.newsletter-form');
+    if (form) {
+        form.addEventListener('submit', () => {
+            setTimeout(() => form.reset(), 500);
+        });
+    }
 });
