@@ -4,184 +4,198 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Men's Black Long Sleeve Shirts | lululemon</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',Helvetica,Arial,sans-serif;background:#fff;color:#000}
+a{color:inherit;text-decoration:none}
+.top-banner{background:#000;color:#fff;text-align:center;padding:8px;font-size:11px}
+.top-banner a{text-decoration:underline}
+.main-header{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-bottom:1px solid #e5e5e5;position:sticky;top:0;background:#fff;z-index:100}
+.header-left{display:flex;align-items:center;gap:40px}
+.logo{font-weight:700;font-size:20px}
+.main-nav{display:flex;gap:24px;font-size:14px;font-weight:600}
+.main-nav a.active{border-bottom:2px solid #000}
+.header-right{display:flex;align-items:center;gap:18px;font-size:14px}
+.icon-btn{background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:6px}
+.breadcrumb{padding:16px 24px;font-size:12px;color:#57585b;display:flex;gap:8px}
+.page-header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px 10px;flex-wrap:wrap;gap:12px}
+.page-header h1{font-size:32px;font-weight:500;letter-spacing:-1px}
+.page-header h1 span{font-size:14px;font-weight:400;color:#57585b;margin-left:8px}
+.filter-toolbar{display:flex;gap:10px}
+.btn-outline{border:1px solid #000;border-radius:4px;padding:8px 16px;background:#fff;cursor:pointer;font-size:13px;font-weight:600}
+.main-content{display:grid;grid-template-columns:220px 1fr;gap:24px;padding:20px 24px}
+.sidebar{position:sticky;top:80px;height:fit-content}
+.filter-group{border-bottom:1px solid #e5e5e5;padding:16px 0}
+.filter-toggle{width:100%;display:flex;justify-content:space-between;background:none;border:none;font-weight:600;font-size:14px;cursor:pointer}
+.filter-options{margin-top:12px;display:none;flex-direction:column;gap:8px;font-size:13px}
+.filter-options.open{display:flex}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px 16px}
+.product-card{cursor:pointer;transition:.2s}
+.product-card:hover{opacity:.9}
+.product-image{position:relative;background:#f5f5f5;aspect-ratio:3/4;overflow:hidden}
+.product-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.product-card:hover .product-image img{transform:scale(1.03)}
+.badge{position:absolute;bottom:8px;left:8px;background:#fff;font-size:10px;padding:2px 6px;border-radius:2px;font-weight:600}
+.product-meta{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.swatches{display:flex;gap:6px}
+.sw{width:12px;height:12px;border-radius:50%;border:1px solid #ddd;display:inline-block}
+.sw.black{background:#000}.sw.red{background:#c1272d}.sw.grey{background:#777}.sw.blue{background:#1e3a8a}
+.wishlist{background:none;border:none;cursor:pointer}
+.product-card h3{font-size:13px;font-weight:500;margin:8px 0 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.product-card p{font-size:12px;display:flex;justify-content:space-between;color:#57585b}
+.product-card p span{color:#000;font-weight:600}
+.view-count{text-align:center;padding:40px 0;font-size:12px;color:#57585b}
+.page{display:none}.page.active{display:block}
+.product-detail{padding:30px 24px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.product-detail img{width:100%;background:#f5f5f5}
+.footer{background:#000;color:#fff;padding:50px 0 20px;margin-top:20px}
+.footer-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:30px;width:92%;max-width:1400px;margin:0 auto}
+.footer-col h4{font-size:12px;margin-bottom:12px;text-transform:uppercase}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:8px}
+.footer-col ul li a{font-size:12px;color:#bbb}
+.footer-col ul li a:hover{color:#fff}
+.newsletter-form{display:flex;margin-top:10px;border:1px solid #555;border-radius:4px;overflow:hidden}
+.newsletter-form input{flex:1;padding:10px;background:#000;border:none;color:#fff;font-size:12px}
+.newsletter-form button{background:#fff;color:#000;border:none;padding:0 14px;cursor:pointer}
+.social-icons{margin-top:16px;display:flex;gap:12px}
+.social-icons a{font-size:16px}
+.footer-bottom{border-top:1px solid #222;margin-top:30px;padding-top:16px;display:flex;justify-content:space-between;font-size:10px;color:#999;width:92%;max-width:1400px;margin:30px auto 0}
+@media(max-width:1100px){.product-grid{grid-template-columns:repeat(3,1fr)}.footer-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){.main-nav{display:none}.main-content{grid-template-columns:1fr}.product-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}.product-detail{grid-template-columns:1fr}.page-header h1{font-size:24px}}
+    </style>
 </head>
 <body>
-    <!-- Top Banner -->
-    <div class="top-banner">
-        <p>The latest fall drop is here. Find fresh inspiration to move. <a href="#">Shop Fall 2025</a></p>
-    </div>
+    <div class="top-banner">The latest fall drop is here. Find fresh inspiration to move. <a href="#">Shop Fall 2025</a></div>
 
-    <!-- Header -->
     <header class="main-header">
         <div class="header-left">
-            <a href="#" class="logo"><i class="fa-brands fa-lululemon"></i> lululemon</a>
+            <a href="#" onclick="showPage('men')" class="logo">lululemon</a>
             <nav class="main-nav">
-                <a href="#">New & Featured</a>
-                <a href="#">Women</a>
-                <a href="#">Men</a>
-                <a href="#">Accessories</a>
-                <a href="#">Outerwear</a>
-                <a href="#">Activity</a>
-                <a href="#">We Made Too Much</a>
+                <a href="#" onclick="showPage('home')" id="nav-home">New & Featured</a>
+                <a href="#" onclick="showPage('women')" id="nav-women">Women</a>
+                <a href="#" onclick="showPage('men')" id="nav-men" class="active">Men</a>
+                <a href="#" onclick="showPage('accessories')" id="nav-acc">Accessories</a>
+                <a href="#" onclick="showPage('cart')">Cart (0)</a>
             </nav>
         </div>
         <div class="header-right">
             <button class="icon-btn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
-            <button class="icon-btn"><i class="fa-regular fa-user"></i> US (USD)</button>
-            <button class="icon-btn"><i class="fa-regular fa-heart"></i></button>
-            <button class="icon-btn"><i class="fa-solid fa-bag-shopping"></i> 0</button>
-            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <button class="icon-btn"><i class="fa-solid fa-bag-shopping"></i></button>
         </div>
     </header>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <a href="#">Men's Clothes</a> <span>/</span> <a href="#">Shirts</a> <span>/</span> <a href="#">Long Sleeve Shirts</a> <span>/</span> <span>Black</span>
+    <!-- HOME PAGE -->
+    <div id="page-home" class="page">
+        <div class="breadcrumb">Home / New & Featured</div>
+        <div class="page-header"><h1>New & Featured</h1></div>
+        <div style="padding:60px 24px;text-align:center"><h2>Welcome to lululemon</h2><p style="margin-top:12px">Click on Men to see the black long sleeve shirts collection.</p><button class="btn-outline" onclick="showPage('men')" style="margin-top:20px">Shop Men</button></div>
     </div>
 
-    <!-- Page Title -->
-    <div class="page-header">
-        <h1>Men's Black Long Sleeve Shirts <span>32</span></h1>
-        <div class="filter-toolbar">
-            <button class="btn-outline" id="filterBtn"><i class="fa-solid fa-sliders"></i> Filter</button>
-            <button class="btn-outline">Sort <i class="fa-solid fa-chevron-down"></i></button>
+    <!-- MEN PAGE - YOUR SCREENSHOT -->
+    <div id="page-men" class="page active">
+        <div class="breadcrumb"><a href="#" onclick="showPage('home')">Men's Clothes</a> <span>/</span> <a href="#">Shirts</a> <span>/</span> <a href="#">Long Sleeve Shirts</a> <span>/</span> <span>Black</span></div>
+        <div class="page-header">
+            <h1>Men's Black Long Sleeve Shirts <span>32</span></h1>
+            <div class="filter-toolbar"><button class="btn-outline"><i class="fa-solid fa-sliders"></i> Filter</button><button class="btn-outline">Sort <i class="fa-solid fa-chevron-down"></i></button></div>
+        </div>
+        <main class="main-content">
+            <aside class="sidebar">
+                <div class="filter-group"><button class="filter-toggle">Category <i class="fa-solid fa-chevron-up"></i></button><div class="filter-options open"><label><input type="checkbox" checked> Long Sleeve Shirts</label><label><input type="checkbox"> Short Sleeve</label><label><input type="checkbox"> Polos</label></div></div>
+                <div class="filter-group"><button class="filter-toggle">Size <i class="fa-solid fa-chevron-up"></i></button><div class="filter-options open" style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px"><button class="btn-outline">S</button><button class="btn-outline">M</button><button class="btn-outline">L</button></div></div>
+</aside>
+            <section class="product-grid">
+                <div class="product-card" onclick="showPage('product')"><div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LM3CZSS_0001_1?wid=600&fmt=webp&qlt=80" alt=""><span class="badge">Trending</span></div><div class="product-meta"><div class="swatches"><span class="sw black"></span><span class="sw red"></span><span class="sw grey"></span></div><button class="wishlist"><i class="fa-regular fa-heart"></i></button></div><h3>Grand Standard Long-Sleeve Polo</h3><p>Black <span>$128</span></p></div>
+                <div class="product-card" onclick="showPage('product')"><div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LM5AMTS_0001_1?wid=600&fmt=webp&qlt=80" alt=""></div><div class="product-meta"><div class="swatches"><span class="sw black"></span><span class="sw grey"></span></div><button class="wishlist"><i class="fa-regular fa-heart"></i></button></div><h3>License to Train Hoodie</h3><p>Black <span>$118</span></p></div>
+                <div class="product-card" onclick="showPage('product')"><div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LM5ALTS_0001_1?wid=600&fmt=webp&qlt=80" alt=""></div><div class="product-meta"><div class="swatches"><span class="sw black"></span></div><button class="wishlist"><i class="fa-regular fa-heart"></i></button></div><h3>Soft Jersey Half Zip</h3><p>Black <span>$98</span></p></div>
+                <div class="product-card" onclick="showPage('product')"><div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LM5AMBS_0427_1?wid=600&fmt=webp&qlt=80" alt=""></div><div class="product-meta"><div class="swatches"><span class="sw black"></span></div><button class="wishlist"><i class="fa-regular fa-heart"></i></button></div><h3>Soft Knit Overshirt</h3><p>Black <span>$148</span></p></div>
+                <div class="product-card" onclick="showPage('product')"><div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LM5ANSS_0001_1?wid=600&fmt=webp&qlt=80" alt=""></div><div class="product-meta"><div class="swatches"><span class="sw black"></span></div><button class="wishlist"><i class="fa-regular fa-heart"></i></button></div><h3>Sojourn Overshirt</h3><p>Black <span>$148</span></p></div>
+                <div class="product-card" onclick="showPage('product')"><div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LM3DSSS_0001_1?wid=600&fmt=webp&qlt=80" alt=""></div><div class="product-meta"><div class="swatches"><span class="sw black"></span></div><button class="wishlist"><i class="fa-regular fa-heart"></i></button></div><h3>Metal Vent Tech Half Zip</h3><p>Black <span>$118</span></p></div>
+                <div class="product-card" onclick="showPage('product')"><div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LM5AOTS_0001_1?wid=600&fmt=webp&qlt=80" alt=""></div><div class="product-meta"><div class="swatches"><span class="sw black"></span></div><button class="wishlist"><i class="fa-regular fa-heart"></i></button></div><h3>EasySet Training Long-Sleeve</h3><p>Black <span>$88</span></p></div>
+                <div class="product-card" onclick="showPage('product')"><div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LM5AMBS_0001_1?wid=600&fmt=webp&qlt=80" alt=""></div><div class="product-meta"><div class="swatches"><span class="sw black"></span></div><button class="wishlist"><i class="fa-regular fa-heart"></i></button></div><h3>Rib-Knit Slim-Fit Shirt</h3><p>Black <span>$98</span></p></div>
+            </section>
+        </main>
+        <div class="view-count">Viewing 32 of 32</div>
+    </div>
+
+    <!-- WOMEN PAGE -->
+<div id="page-women" class="page">
+        <div class="breadcrumb">Women's Clothes / Shirts</div>
+        <div class="page-header"><h1>Women's Black Long Sleeve Shirts <span>28</span></h1></div>
+        <div style="padding:20px 24px"><div class="product-grid">
+            <div class="product-card" onclick="showPage('product')"><div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LW5DVDS_0001_1?wid=600&fmt=webp&qlt=80" alt=""></div><h3>Define Jacket</h3><p>Black <span>$128</span></p></div>
+            <div class="product-card" onclick="showPage('product')"><div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LW5ETLS_0001_1?wid=600&fmt=webp&qlt=80" alt=""></div><h3>Swiftly Tech Long Sleeve</h3><p>Black <span>$78</span></p></div>
+        </div></div>
+    </div>
+
+    <!-- ACCESSORIES PAGE -->
+    <div id="page-accessories" class="page">
+        <div class="breadcrumb">Accessories</div>
+        <div class="page-header"><h1>Accessories</h1></div>
+        <div style="padding:60px 24px;text-align:center"><h2>Bags, Hats & More</h2><p style="margin-top:10px">Accessories collection coming soon.</p></div>
+    </div>
+
+    <!-- SINGLE PRODUCT PAGE -->
+    <div id="page-product" class="page">
+        <div class="breadcrumb"><a href="#" onclick="showPage('men')">Men</a> / Product</div>
+        <div class="product-detail">
+            <img src="https://images.lululemon.com/is/image/lululemon/LM3CZSS_0001_1?wid=800&fmt=webp&qlt=80" alt="">
+            <div>
+                <h1>Grand Standard Long-Sleeve Polo</h1>
+                <p style="margin:12px 0;color:#57585b">$128 - Black - Size M</p>
+                <p style="font-size:14px;line-height:1.6">A soft, classic polo with a relaxed fit. Made with our signature fabric for all-day comfort. This is a full product page with working link from the main grid.</p>
+                <button class="btn-outline" style="background:#000;color:#fff;margin-top:20px;padding:14px 30px" onclick="showPage('cart')">Add To Bag - $128</button>
+                <button class="btn-outline" style="margin-top:10px;display:block" onclick="showPage('men')">← Back to Shirts</button>
+            </div>
         </div>
     </div>
 
-    <main class="main-content">
-        <!-- Sidebar Filters -->
-        <aside class="sidebar" id="sidebar">
-            <div class="filter-group">
-                <button class="filter-toggle">Category <i class="fa-solid fa-chevron-up"></i></button>
-                <div class="filter-options open">
-                    <label><input type="checkbox" checked> Long Sleeve Shirts</label>
-                    <label><input type="checkbox"> Short Sleeve Shirts</label>
-                    <label><input type="checkbox"> T-Shirts</label>
-                    <label><input type="checkbox"> Polos</label>
-                </div>
-            </div>
-            <div class="filter-group">
-                <button class="filter-toggle">Size <i class="fa-solid fa-chevron-up"></i></button>
-                <div class="filter-options open size-grid">
-                    <button>XS</button><button>S</button><button>M</button><button>L</button><button>XL</button><button>XXL</button>
-                </div>
-            </div>
-            <div class="filter-group">
-                <button class="filter-toggle">Colour <i class="fa-solid fa-chevron-up"></i></button>
-                <div class="filter-options open color-dots">
-                    <span class="dot black active"></span><span class="dot grey"></span><span class="dot white"></span><span class="dot blue"></span>
-                </div>
-            </div>
-        </aside>
-<!-- Product Grid -->
-        <section class="product-grid">
-            <!-- Product Card Template - 12 items -->
-            <div class="product-card">
-                <div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LM3CZSS_0001_1?wid=750&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=bicub&op_usm=0.5,2,10,0&iccEmbed=0&printRes=72" alt="Grand Standard Polo"><span class="badge">Trending</span></div>
-                <div class="product-meta"><div class="swatches"><span class="sw black"></span><span class="sw red"></span><span class="sw grey"></span></div><button class="wishlist"><i class="fa-regular fa-heart"></i></button></div>
-                <h3>Grand Standard Long-Sleeve Polo</h3><p>Black <span>$128</span></p>
-            </div>
+    <!-- CART PAGE -->
+    <div id="page-cart" class="page">
+        <div class="page-header"><h1>Your Bag (1)</h1></div>
+        <div style="padding:20px 24px"><p>Grand Standard Polo - $128</p><button class="btn-outline" style="background:#000;color:#fff;margin-top:20px;padding:12px 24px">Checkout</button></div>
+    </div>
 
-            <div class="product-card">
-                <div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LM5AMTS_0001_1?wid=750&fmt=webp&qlt=80" alt="License to Train Hoodie"></div>
-                <div class="product-meta"><div class="swatches"><span class="sw black"></span><span class="sw grey"></span><span class="sw blue"></span></div><button class="wishlist"><i class="fa-regular fa-heart"></i></button></div>
-                <h3>License to Train Hoodie</h3><p>Black <span>$118</span></p>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LM5ALTS_0001_1?wid=750&fmt=webp&qlt=80" alt="Soft Jersey Half Zip"></div>
-                <div class="product-meta"><div class="swatches"><span class="sw black"></span><span class="sw beige"></span></div><button class="wishlist"><i class="fa-regular fa-heart"></i></button></div>
-                <h3>Soft Jersey Half Zip</h3><p>Heathered Black... <span>$98</span></p>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LM5AMBS_0427_1?wid=750&fmt=webp&qlt=80" alt="Soft Knit Overshirt"></div>
-                <div class="product-meta"><div class="swatches"><span class="sw black"></span><span class="sw brown"></span></div><button class="wishlist"><i class="fa-regular fa-heart"></i></button></div>
-                <h3>Soft Knit Overshirt</h3><p>Check Plaid <span>$148</span></p>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LM5AMTS_0001_2?wid=750&fmt=webp&qlt=80" alt="License to Train Long-Sleeve"></div>
-                <div class="product-meta"><div class="swatches"><span class="sw black"></span></div><button class="wishlist"><i class="fa-regular fa-heart"></i></button></div>
-                <h3>License to Train Long-Sleeve Shirt</h3><p>Black <span>$88</span></p>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LM3DSSS_0001_1?wid=750&fmt=webp&qlt=80" alt="Metal Vent Tech"></div>
-                <div class="product-meta"><div class="swatches"><span class="sw black"></span></div><button class="wishlist"><i class="fa-regular fa-heart"></i></button></div>
-                <h3>Metal Vent Tech Half Zip</h3><p>Black... <span>$118</span></p>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LM5AOTS_0001_1?wid=750&fmt=webp&qlt=80" alt="EasySet"></div>
-                <div class="product-meta"><div class="swatches"><span class="sw black"></span><span class="sw grey"></span></div><button class="wishlist"><i class="fa-regular fa-heart"></i></button></div>
-                <h3>EasySet Training Long-Sleeve</h3><p>Black <span>$88</span></p>
-            </div>
-<div class="product-card">
-                <div class="product-image"><img src="https://images.lululemon.com/is/image/lululemon/LM5ANSS_0001_1?wid=750&fmt=webp&qlt=80" alt="Sojourn"></div>
-                <div class="product-meta"><div class="swatches"><span class="sw black"></span></div><button class="wishlist"><i class="fa-regular fa-heart"></i></button></div>
-                <h3>Sojourn Overshirt</h3><p>Black <span>$148</span></p>
-            </div>
-        </section>
-    </main>
-
-    <div class="view-count">Viewing 32 of 32</div>
-
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <h4>My Account</h4>
-                <ul><li><a href="#">Membership Program</a></li><li><a href="#">Sign In</a></li><li><a href="#">Register</a></li><li><a href="#">Order Status</a></li><li><a href="#">Returns</a></li></ul>
-            </div>
-            <div class="footer-col">
-                <h4>Help</h4>
-                <ul><li><a href="#">Ordering</a></li><li><a href="#">Returns and Refunds</a></li><li><a href="#">Shipping and Delivery</a></li><li><a href="#">Payment</a></li><li><a href="#">Gift Cards</a></li></ul>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul><li><a href="#">Accessibility Statement</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li></ul>
-            </div>
-            <div class="footer-col">
-                <h4>About Us</h4>
-                <ul><li><a href="#">Our Business</a></li><li><a href="#">Our Values</a></li><li><a href="#">Sustainability</a></li></ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact Us</h4>
-                <ul><li><a href="#">Live Chat</a></li><li><a href="#">Product Experts</a></li><li><a href="#">Store Locator</a></li></ul>
-            </div>
+        <div class="footer-grid">
+            <div class="footer-col"><h4>My Account</h4><ul><li><a href="#" onclick="showPage('home')">Membership</a></li><li><a href="#">Sign In</a></li><li><a href="#">Order Status</a></li><li><a href="#">Returns</a></li></ul></div>
+            <div class="footer-col"><h4>Help</h4><ul><li><a href="#">Shipping</a></li><li><a href="#">Returns and Refunds</a></li><li><a href="#">Payment</a></li><li><a href="#">Gift Cards</a></li></ul></div>
+            <div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li></ul></div>
+            <div class="footer-col"><h4>About Us</h4><ul><li><a href="#">Our Business</a></li><li><a href="#">Sustainability</a></li></ul></div>
+            <div class="footer-col"><h4>Contact Us</h4><ul><li><a href="#">Live Chat</a></li><li><a href="#">Store Locator</a></li></ul></div>
             <div class="footer-col newsletter-col">
-                <h4>Email Sign Up</h4>
-                <p>Get first dibs on new gear.</p>
+                <h4>Email Sign Up</h4><p>Get first dibs on new gear.</p>
                 <form name="contact" method="POST" data-netlify="true" class="newsletter-form">
                     <input type="hidden" name="form-name" value="contact" />
-                    <input type="email" name="email" placeholder="Enter your email" required>
+<input type="email" name="email" placeholder="Enter your email" required>
                     <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
                 </form>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-                <div class="app-badges">
-                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
-                </div>
+                <div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div>
             </div>
         </div>
-        <div class="footer-bottom container">
-            <p>&copy; 2026 lululemon athletica | 1818 Cornwall Ave, Vancouver, BC V6J 1C7</p>
-            <div class="footer-bottom-links">
-                <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
-            </div>
-        </div>
+        <div class="footer-bottom"><p>&copy; 2026 lululemon athletica | 1818 Cornwall Ave, Vancouver, BC V6J 1C7</p><div><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></div></div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+function showPage(pageName){
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    document.querySelectorAll('.main-nav a').forEach(a=>a.classList.remove('active'));
+    const target = document.getElementById('page-'+pageName);
+    if(target) target.classList.add('active');
+    const nav = document.getElementById('nav-'+pageName);
+    if(nav) nav.classList.add('active');
+    window.scrollTo(0,0);
+}
+document.addEventListener('DOMContentLoaded', ()=>{
+    document.querySelectorAll('.filter-toggle').forEach(btn=>{
+        btn.addEventListener('click',()=>{
+            const opt = btn.nextElementSibling;
+            opt.classList.toggle('open');
+        });
+    });
+});
+    </script>
 </body>
 </html>
